@@ -1,4 +1,4 @@
-package ch.hofmann.refinement_notes_consolidation.model;
+package ch.hofmann.refinement_notes_consolidation.model.dto;
 
 import java.util.List;
 
