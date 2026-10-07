@@ -1,11 +1,12 @@
 package ch.hofmann.refinement_notes_consolidation.controller;
 
+import ch.hofmann.refinement_notes_consolidation.model.dto.ConsolidationRequest;
+import ch.hofmann.refinement_notes_consolidation.model.dto.ConsolidationResponse;
+import ch.hofmann.refinement_notes_consolidation.model.prompt.ConsolidationPrompt;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/consolidate")
@@ -22,13 +23,22 @@ public class ConsolidationController {
     }
 
 
-    @GetMapping
-    public String chat(@RequestParam String message, @RequestParam String provider) {
-        if ("local".equals(provider)) {
-            return localChatClient.prompt().user(message).call().content();
-        } else if ("openai".equals(provider)) {
-            return openAiChatClient.prompt().user(message).call().content();
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ConsolidationResponse chat(@RequestBody ConsolidationRequest consolidationRequest) {
+        ChatClient client = null;
+        if ("local".equals(consolidationRequest.provider())) {
+            client = localChatClient;
+        } else if ("openai".equals(consolidationRequest.provider())) {
+            client = openAiChatClient;
         }
-        throw new IllegalArgumentException("Unsupported provider");
+
+        if (client == null) {
+            throw new IllegalArgumentException("Unsupported provider");
+        }
+
+        return client.prompt()
+                .user(ConsolidationPrompt.from(consolidationRequest))
+                .call()
+                .entity(ConsolidationResponse.class);
     }
 }
