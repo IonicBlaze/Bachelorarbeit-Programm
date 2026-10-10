@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ModelsConfiguration {
 
-
     private static final String SYSTEM_PROMPT = """
               Du unterstützt ein Scrum-Team bei der Aufbereitung der Ergebnisse eines Refinement-Meetings.
               Erstelle aus den Notizen der einzelnen Teilnehmer und - sofern vorhanden - dem Projekt-Wiki einen 
@@ -33,6 +32,7 @@ public class ModelsConfiguration {
               - Ignoriere Wiki-Inhalte, die keinen erkennbaren Bezug zum Ticket besitzen.
               - Erfinde keine Quellenangaben. Verwende ausschliesslich die angegebenen Bezeichnungen der Notizzettel und Wiki-Einträge.
               - Falls in einer Kategorie keine Inhalte erkannt werden, gib eine leere Liste aus.
+              - Benutze innerhalb von JSON-Strings keine doppelten Anführungszeichen. Wenn du Anführungszeichen benutzen musst, benutze einfache ('')
             """;
 
     @Bean
