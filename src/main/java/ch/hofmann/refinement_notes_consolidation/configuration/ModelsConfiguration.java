@@ -34,6 +34,7 @@ public class ModelsConfiguration {
               - Erfinde keine Quellenangaben. Verwende ausschliesslich die angegebenen Bezeichnungen der Notizzettel und Wiki-Einträge.
               - Falls in einer Kategorie keine Inhalte erkannt werden, gib eine leere Liste aus.
               - Benutze innerhalb von JSON-Strings keine doppelten Anführungszeichen. Wenn du Anführungszeichen benutzen musst, benutze einfache ('')
+              - Teile jedem Akzeptanzkriterium, jedem Widerspruch und jeder offnen Frage eine eindeutige, aufsteigende ID zu (Regex: (AK|WS|OF)-\\d+) 
             """;
 
     @Bean
