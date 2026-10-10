@@ -1,0 +1,22 @@
+{
+  "provider": "local",
+  "participantNotes": {
+    "Marcus": [
+      "Das Login-Formular muss ein Benutzername-Feld haben.",
+      "Das Passwort-Feld sollte mind. 10 Zeichen erlauben.",
+      "Der Login-Button soll rot sein."
+    ],
+    "Sophia": [
+      "Ein Benutzername-Feld ist erforderlich.",
+      "Das Passwort muss mit mindestens 8 Zeichen validiert werden.",
+      "Der Login-Button soll grün sein.",
+      "Evtl. extra Fehlermeldung wenn Username/PW falsch ist"
+    ],
+    "Thomas": [
+      "Das Benutzername-Feld muss zwischen 3 und 20 Zeichen lang sein.",
+      "Ein Passwort-Feld ist notwendig.",
+      "Wie sollte ein fehlgeschlagener Login dem Benutzer angezeigt werden?"
+    ]
+  },
+  "projectWiki": []
+}
