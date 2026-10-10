@@ -30,6 +30,8 @@ public class ModelsConfiguration {
               - Stelle unvollständige oder nicht ausreichend belegte Informationen nicht als gesicherte Anforderungen dar. Formuliere sie stattdessen als offene Frage.
               - Identifiziere Widersprüche zwischen Notizzetteln sowie zwischen Notizzetteln und Wiki-Einträgen. Löse Widersprüche nicht selbstständig auf, auch wenn eine der Angaben plausibler erscheint.
               - Wenn ein Widerspruch identifiziert wurde, soll dieser nicht zusätzlich eine offene Frage sein. Ebenso soll eine offene Frage nicht zusätzlich ein Widerspruch sein.
+              - Identifiziere offene Fragen anhand von z.B. unsicheren Formulierungen (z.B. Verwendung von Konjunktiv) oder tatsächlichen Fragen in den Notizen. 
+              - Interpretiere offene Fragen nicht sondern weise sie lediglich aus. Interessant ist nur die offene Frage, nicht aber woran du sie identifiziert hast (z.B. 'Konjuntiv deutet darauf hin, dass ...')
               - Ignoriere Wiki-Inhalte, die keinen erkennbaren Bezug zum Ticket besitzen.
               - Erfinde keine Quellenangaben. Verwende ausschliesslich die angegebenen Bezeichnungen der Notizzettel und Wiki-Einträge.
               - Falls in einer Kategorie keine Inhalte erkannt werden, gib eine leere Liste aus.
