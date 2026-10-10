@@ -33,9 +33,8 @@ public class ConsolidationPrompt {
         request.participantNotes().entrySet().forEach(e -> {
             String user = e.getKey();
 
-            String[] lines = e.getValue().split("\n");
-            String notizenStatements = IntStream.range(0, lines.length)
-                    .mapToObj(i -> "%d. %s".formatted(i, lines[i]))
+            String notizenStatements = IntStream.range(0, e.getValue().size())
+                    .mapToObj(i -> "%d. %s".formatted(i, e.getValue().get(i)))
                     .collect(Collectors.joining("\n"));
 
             sb.append("""
