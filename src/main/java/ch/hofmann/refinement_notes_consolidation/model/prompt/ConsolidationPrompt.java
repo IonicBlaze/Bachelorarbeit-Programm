@@ -61,9 +61,10 @@ public class ConsolidationPrompt {
                 wikiBuilder.append("""
                         ## {id}
                         {statements}
-                        """.replace("{id}", entry.id()
+                        """
+                        .replace("{id}", entry.id())
                         .replace("{statements}", statements)
-                ));
+                );
             });
 
 
