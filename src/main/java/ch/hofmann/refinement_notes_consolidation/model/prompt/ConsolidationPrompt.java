@@ -34,7 +34,7 @@ public class ConsolidationPrompt {
             String user = e.getKey();
 
             String notizenStatements = IntStream.range(0, e.getValue().size())
-                    .mapToObj(i -> "%d. %s".formatted(i, e.getValue().get(i)))
+                    .mapToObj(i -> "%d. %s".formatted((i+1), e.getValue().get(i)))
                     .collect(Collectors.joining("\n"));
 
             sb.append("""
