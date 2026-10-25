@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.time.Duration;
+
 @Configuration
 public class ModelsConfiguration {
 
@@ -46,6 +48,7 @@ public class ModelsConfiguration {
                         .apiKey(apiKey)
                         .model("gpt-6-astra")
                         .reasoningEffort("low")
+                        .timeout(Duration.ofMinutes(30))
                         .build())
                 .build();
     }
@@ -58,6 +61,7 @@ public class ModelsConfiguration {
                         .apiKey("doesnt-matter")
                         .model("qwen/qwen3.8-27b")
                         .reasoningEffort("low")
+                        .timeout(Duration.ofMinutes(30))
                         .build())
                 .build();
     }
