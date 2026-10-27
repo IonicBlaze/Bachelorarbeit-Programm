@@ -26,19 +26,20 @@ public class ModelsConfiguration {
 
               - Führe inhaltlich übereinstimmende Aussagen zusammen und vermeide Wiederholungen.
               - Formuliere Akzeptanzkriterien eindeutig, präzise und überprüfbar.
+              - Akzeptanzkriterien müssen immer genau einen Umstand ausdrücken (atomare Aussagen). Wenn ein Satz mehrere einzelne Aussgen enthält, sollen diese einzeln betrachtet werden.
               - Übernimm nur Anforderungen, die sich auf mindestens einen Notizzettel oder einen Wiki-Eintrag zurückführen lassen.
-              - Gib zu jedem Akzeptanzkriterium die verwendeten Quellen an (beispielsweise Tom-1 für die erste Notiz von Tom oder P-4 für das vierte Statement unter Punkt 'P' im Wiki) 
+              - Gib zu jedem Akzeptanzkriterium die verwendeten Quellen an (beispielsweise Tom-1 für die erste Notiz von Tom oder P-4 für das vierte Statement unter Punkt 'P' im Wiki).
               - Unterscheide zwischen gefordertem Verhalten und Beschreibungen des bestehenden Systems. Ein beschriebener Ist-Zustand ist nicht automatisch eine Anforderung.
               - Stelle unvollständige oder nicht ausreichend belegte Informationen nicht als gesicherte Anforderungen dar. Formuliere sie stattdessen als offene Frage.
               - Identifiziere Widersprüche zwischen Notizzetteln sowie zwischen Notizzetteln und Wiki-Einträgen. Löse Widersprüche nicht selbstständig auf, auch wenn eine der Angaben plausibler erscheint.
               - Wenn ein Widerspruch identifiziert wurde, soll dieser nicht zusätzlich eine offene Frage sein. Ebenso soll eine offene Frage nicht zusätzlich ein Widerspruch sein.
-              - Identifiziere offene Fragen anhand von z.B. unsicheren Formulierungen (z.B. Verwendung von Konjunktiv) oder tatsächlichen Fragen in den Notizen. 
+              - Identifiziere offene Fragen anhand von z.B. unsicheren Formulierungen (z.B. Verwendung von Konjunktiv) oder tatsächlichen Fragen in den Notizen.
               - Interpretiere offene Fragen nicht sondern weise sie lediglich aus. Interessant ist nur die offene Frage, nicht aber woran du sie identifiziert hast (z.B. 'Konjuntiv deutet darauf hin, dass ...')
               - Ignoriere Wiki-Inhalte, die keinen erkennbaren Bezug zum Ticket besitzen.
               - Erfinde keine Quellenangaben. Verwende ausschliesslich die angegebenen Bezeichnungen der Notizzettel und Wiki-Einträge.
               - Falls in einer Kategorie keine Inhalte erkannt werden, gib eine leere Liste aus.
               - Benutze innerhalb von JSON-Strings keine doppelten Anführungszeichen. Wenn du Anführungszeichen benutzen musst, benutze einfache ('')
-              - Teile jedem Akzeptanzkriterium, jedem Widerspruch und jeder offnen Frage eine eindeutige, aufsteigende ID zu (Regex: (AK|WS|OF)-\\d+) 
+              - Teile jedem Akzeptanzkriterium, jedem Widerspruch und jeder offnen Frage eine eindeutige, aufsteigende ID zu (Regex: (AK|WS|OF)-\\d+).
             """;
 
     @Bean
